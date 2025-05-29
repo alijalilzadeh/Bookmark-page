@@ -7,14 +7,17 @@
   margin: 0;
   font-family: "Rubik", sans-serif;
 }
-body{
+
+body {
   height: 100vh;
-  background-color:#FAF9F6;
+  background-color: #fffefc;
 }
-p{
+
+p {
   color: #8b8b8d;
 
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -46,22 +49,36 @@ ul .nav-link {
   margin-right: 1rem;
 }
 
-ul .nav-link .login-btn {
-  color: #fff;
-  background-color: hsl(0, 94%, 66%);
-  padding: .5rem 1.2rem;
-  border-radius: 5px;
-  font-size: .7rem !important;
-  box-shadow: 2px 3px 65px rgba(0, 0, 0, 0.156);
-}
-
 ul .nav-link a {
   text-decoration: none;
   color: hsl(229, 31%, 21%);
   font-size: .8rem;
   text-transform: uppercase;
   font-weight: 500;
+  transition: all 0.3s ease;
 }
+
+ul .nav-link a:hover {
+  color: hsl(0, 94%, 66%);
+}
+
+ul .nav-link .login-btn {
+  color: #fff;
+  letter-spacing: 2px;
+  background-color: hsl(0, 94%, 66%);
+  padding: .5rem 1.2rem;
+  border-radius: 5px;
+  border: 2px solid hsl(0, 94%, 66%);
+  font-size: .7rem !important;
+  box-shadow: 2px 3px 65px rgba(0, 0, 0, 0.156);
+}
+
+ul .nav-link .login-btn:hover {
+  color: hsl(0, 94%, 66%);
+  background-color: #fff;
+  outline: hsl(0, 94%, 66%);
+}
+
 
 /* Main part */
 .main-part {
@@ -110,6 +127,7 @@ ul .nav-link a {
 .buttons {
   display: flex;
   gap: .7rem;
+  cursor: pointer;
 }
 
 .bookmark-download {
@@ -124,20 +142,41 @@ ul .nav-link a {
 #chromebtn {
   color: #fff;
   background-color: hsl(231, 69%, 60%);
+  outline: 2px solid hsl(231, 69%, 60%);
+  transition: all .3s ease;
+
+}
+
+#chromebtn:hover {
+  color: hsl(231, 69%, 60%);
+  background-color: #fff;
+  font-weight: 500;
+
 }
 
 #firefoxbtn {
   box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.165);
-
+  color:  hsl(229, 31%, 21%);
+  font-weight: 500;
+  transition: all .3s ease;
+  border: 1px solid rgb(235, 232, 232);
 }
 
-#main-part .features-part h1 ,.download-extension h1{
+#firefoxbtn:hover {
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.165);
+  border: 1px solid  hsl(229, 31%, 21%);
+}
+
+
+#main-part .features-part h1,
+.download-extension h1 {
   color: hsl(229, 31%, 21%);
   font-size: 1.7rem;
   font-weight: 500;
 }
 
-#main-part .features-part,#main-part .download-extension{
+#main-part .features-part,
+#main-part .download-extension {
   display: flex;
   gap: 1rem;
   flex-direction: column;
@@ -146,22 +185,72 @@ ul .nav-link a {
   padding: 0 32%;
 }
 
-.download-boxs{
+.download-extension h1 {
+  font-size: 1.4rem;
+}
+
+.download-boxs {
   display: flex;
   flex-direction: row;
   gap: 2rem;
 }
-.download-box{
+
+.download-box {
+  width: 100%;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.4rem;
   justify-content: space-between;
   border: 1px solid black;
   align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 6px;
 }
-.download-box img{
-  width: 60%;
+
+.download-box h2 {
+  color: hsl(229, 31%, 21%);
 }
-.download-box h1{
-  
+
+.download-box p {
+  font-size: .8rem;
+}
+
+.download-box img {
+  width: 30%;
+}
+
+.add-downloadbtn {
+  width: 100%;
+  color: #fff;
+  background-color: hsl(231, 69%, 60%);
+  border: 1px solid hsl(231, 69%, 60%);
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: .7rem;
+  padding: .7rem 3rem;
+  white-space: nowrap;
+  transition: all .3s ease;
+}
+
+.add-downloadbtn:hover {
+  color: hsl(231, 69%, 60%);
+  outline: 1px solid hsl(231, 69%, 60%);
+  background-color: #fff;
+  font-weight: 600
+}
+
+.firefox-box {
+  transform: translateY(40px);
+}
+
+.opera-box {
+  transform: translateY(70px);
+}
+
+.download-extension {
+  margin: 2rem 0;
+  height: auto;
 }
